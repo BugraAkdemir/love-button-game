@@ -1,0 +1,82 @@
+body {
+        margin: 0;
+        height: 100vh;
+        background: radial-gradient(circle at top, #ffb6c1, #ff6a88, #ff416c);
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        position: relative;
+    }
+
+    /* Arkaplan kalpleri */
+    .heart {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.5);
+        animation: rise 8s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes rise {
+        0% { transform: translateY(110vh) scale(0.6); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-20vh) scale(1.6); opacity: 0; }
+    }
+
+    /* Typewriter efektli yazı */
+    #soru {
+        font-size: 44px;
+        font-weight: 800;
+        margin-bottom: 50px;
+        white-space: nowrap;
+        border-right: 4px solid rgba(255,255,255,0.8);
+        overflow: hidden;
+        width: 420px;
+        text-shadow: 0 0 20px rgba(255,255,255,0.7);
+    }
+
+    .btn {
+        padding: 18px 50px;
+        font-size: 28px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 12px;
+        transition: 0.25s;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* EVET BUTONU */
+    #evetBtn {
+        background: linear-gradient(135deg, #4caf50, #79ff79);
+        color: white;
+        animation: bounce 1.5s infinite;
+        transition: transform 0.2s ease;
+        z-index: 5;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+
+    #evetBtn:hover {
+        box-shadow: 0 0 50px rgba(76, 175, 80, 1);
+        transform: scale(1.15);
+    }
+
+    /* HAYIR BUTONU */
+    #hayirBtn {
+        background: linear-gradient(135deg, #ff3b3b, #ff6b6b);
+        color: white;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: left 0.1s, top 0.1s;
+        z-index: 4;
+    }
